@@ -12,15 +12,27 @@ public class RockController
 	public String myP1Choices;
 	public String myP2Choices;
 	private ScissorsGame ScissorsGame;
+	public  String result;
 	
 	public RockController(PaperPanel basePanel)
 	{
 		baseFrame = new PaperFrame(this);
 		myP1Choices = new String();
 		myP2Choices = new String();
-		ScissorsGame = new ScissorsGame();
+		ScissorsGame = new ScissorsGame(this);
+		result = new String();
 	}
 	
+	public String getResult() 
+	{
+		return result;
+	}
+
+	public void setResult(String result) 
+	{
+		this.result = result;
+	}
+
 	public void start()
 	{
 		

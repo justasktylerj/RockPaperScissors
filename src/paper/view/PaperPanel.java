@@ -25,6 +25,7 @@ public class PaperPanel extends JPanel
 	
 
 	public int P1Wins;
+	public int rand;
 	public int P2Wins;
 	
 	public String newP1Choice;
@@ -52,6 +53,7 @@ public class PaperPanel extends JPanel
 		Result = new JLabel("P1 chose  , and P2 chose  , P  Won!");				
 		P1Wins = 0;
 		P2Wins = 0;	
+		rand = 0;
 		Multiplayer = false;
 		
 		RockButtonP2.setVisible(false);
@@ -119,8 +121,10 @@ public class PaperPanel extends JPanel
 				}
 			else
 				{
-					random
+					randomResult();
 				}
+				
+			
 			}
 		});
 		
@@ -130,20 +134,7 @@ public class PaperPanel extends JPanel
 			{
 				baseController.setMyP2Choices("rock");	
 				
-				if(gameMode.isSelected())
-				{
-					RockButtonP1.setVisible(false);
-					PaperButtonP1.setVisible(false);
-					ScissorsButtonP1.setVisible(false);
-					RockButtonP2.setVisible(true);
-					PaperButtonP2.setVisible(true);
-					ScissorsButtonP2.setVisible(true);
-					whoseTurn.setText("P2's Turn");
-				}
-				else
-				{
-					
-				}
+				
 			}
 		});
 		
@@ -165,7 +156,7 @@ public class PaperPanel extends JPanel
 				}
 				else
 				{
-					
+					randomResult();
 				}
 			}
 		});
@@ -175,21 +166,7 @@ public class PaperPanel extends JPanel
 			public void actionPerformed(ActionEvent click)
 			{
 				baseController.setMyP2Choices("paper");
-		
-				if(gameMode.isSelected())
-				{
-					RockButtonP1.setVisible(false);
-					PaperButtonP1.setVisible(false);
-					ScissorsButtonP1.setVisible(false);
-					RockButtonP2.setVisible(true);
-					PaperButtonP2.setVisible(true);
-					ScissorsButtonP2.setVisible(true);
-					whoseTurn.setText("P2's Turn");
-				}
-				else
-				{
-					
-				}
+
 			}
 		});
 		
@@ -211,7 +188,7 @@ public class PaperPanel extends JPanel
 				}
 				else
 				{
-					
+					randomResult();
 				}
 			}
 		});
@@ -222,20 +199,7 @@ public class PaperPanel extends JPanel
 			{
 				baseController.setMyP2Choices("scissors");
 	
-				if(gameMode.isSelected())
-				{
-					RockButtonP1.setVisible(false);
-					PaperButtonP1.setVisible(false);
-					ScissorsButtonP1.setVisible(false);
-					RockButtonP2.setVisible(true);
-					PaperButtonP2.setVisible(true);
-					ScissorsButtonP2.setVisible(true);
-					whoseTurn.setText("P2's Turn");
-				}
-				else
-				{
-					
-				}
+				
 			}
 		});
 		
@@ -254,6 +218,25 @@ public class PaperPanel extends JPanel
 			}
 		});
 	
+	}
+	
+	public void randomResult()
+	{
+		rand = (int) (Math.random()*2);
+		
+		if(rand == 0)
+		{
+			baseController.setMyP2Choices("scissors");
+		}
+		else if(rand == 1)
+		{
+			baseController.setMyP2Choices("rock");
+		}
+		else
+		{
+			baseController.setMyP2Choices("paper");
+		}
+		
 	}
 	
 }
