@@ -144,6 +144,8 @@ public class PaperPanel extends JPanel
 					ScissorsButtonP1.setVisible(true);
 					whoseTurn.setText("P1's Turn");
 				}
+				
+			whoWon();
 			}
 		});
 		
@@ -185,6 +187,7 @@ public class PaperPanel extends JPanel
 					ScissorsButtonP1.setVisible(true);
 					whoseTurn.setText("P1's Turn");
 				}
+				whoWon();
 			}
 		});
 		
@@ -226,6 +229,7 @@ public class PaperPanel extends JPanel
 					ScissorsButtonP1.setVisible(true);
 					whoseTurn.setText("P1's Turn");
 				}
+				whoWon();
 				
 			}
 		});
@@ -265,5 +269,23 @@ public class PaperPanel extends JPanel
 		}
 		
 	}
+	
+	private void whoWon()
+	{
+		if (baseController.getResult() == "P1")
+		{
+			Result.setText("P1 Used " + baseController.getMyP1Choices() + "and P2 used " + baseController.getMyP2Choices() + " and P1 won");
+			
+		}
+		else if(baseController.getResult() == "P2")
+		{
+			Result.setText("P1 Used " + baseController.getMyP1Choices() + "and P2 used " + baseController.getMyP2Choices() + " and P2 won");
+		}
+		else
+		{
+			Result.setText("You tied");
+		}
+	}
+	
 	
 }
