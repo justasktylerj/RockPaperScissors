@@ -11,7 +11,10 @@ public class ScissorsGame
 		this.P2Choice = null;
 	}
 	
-	
+	public void RunResult()
+	{
+		
+	}
 	
 	
 

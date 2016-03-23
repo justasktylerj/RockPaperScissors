@@ -11,12 +11,14 @@ public class RockController
 	private PaperPanel basePanel;
 	public String myP1Choices;
 	public String myP2Choices;
+	private ScissorsGame ScissorsGame;
 	
 	public RockController(PaperPanel basePanel)
 	{
 		baseFrame = new PaperFrame(this);
 		myP1Choices = new String();
 		myP2Choices = new String();
+		ScissorsGame = new ScissorsGame();
 	}
 	
 	public void start()

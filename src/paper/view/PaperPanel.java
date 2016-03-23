@@ -115,6 +115,11 @@ public class PaperPanel extends JPanel
 					RockButtonP2.setVisible(true);
 					PaperButtonP2.setVisible(true);
 					ScissorsButtonP2.setVisible(true);
+					whoseTurn.setText("P2's Turn");
+				}
+			else
+				{
+					random
 				}
 			}
 		});
@@ -133,6 +138,11 @@ public class PaperPanel extends JPanel
 					RockButtonP2.setVisible(true);
 					PaperButtonP2.setVisible(true);
 					ScissorsButtonP2.setVisible(true);
+					whoseTurn.setText("P2's Turn");
+				}
+				else
+				{
+					
 				}
 			}
 		});
@@ -151,6 +161,11 @@ public class PaperPanel extends JPanel
 					RockButtonP2.setVisible(true);
 					PaperButtonP2.setVisible(true);
 					ScissorsButtonP2.setVisible(true);
+					whoseTurn.setText("P2's Turn");
+				}
+				else
+				{
+					
 				}
 			}
 		});
@@ -169,6 +184,11 @@ public class PaperPanel extends JPanel
 					RockButtonP2.setVisible(true);
 					PaperButtonP2.setVisible(true);
 					ScissorsButtonP2.setVisible(true);
+					whoseTurn.setText("P2's Turn");
+				}
+				else
+				{
+					
 				}
 			}
 		});
@@ -187,6 +207,11 @@ public class PaperPanel extends JPanel
 					RockButtonP2.setVisible(true);
 					PaperButtonP2.setVisible(true);
 					ScissorsButtonP2.setVisible(true);
+					whoseTurn.setText("P2's Turn");
+				}
+				else
+				{
+					
 				}
 			}
 		});
@@ -205,6 +230,11 @@ public class PaperPanel extends JPanel
 					RockButtonP2.setVisible(true);
 					PaperButtonP2.setVisible(true);
 					ScissorsButtonP2.setVisible(true);
+					whoseTurn.setText("P2's Turn");
+				}
+				else
+				{
+					
 				}
 			}
 		});
