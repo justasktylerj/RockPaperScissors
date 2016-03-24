@@ -275,11 +275,16 @@ public class PaperPanel extends JPanel
 		if (baseController.getResult() == "P1")
 		{
 			Result.setText("P1 Used " + baseController.getMyP1Choices() + "and P2 used " + baseController.getMyP2Choices() + " and P1 won");
+			P1Wins++;
+			P1Score.setText("P1 score: " + P1Wins);
 			
 		}
 		else if(baseController.getResult() == "P2")
 		{
 			Result.setText("P1 Used " + baseController.getMyP1Choices() + "and P2 used " + baseController.getMyP2Choices() + " and P2 won");
+			P2Wins++;
+			P2Score.setText("P2 score: " + P2Wins);
+			
 		}
 		else
 		{
