@@ -21,11 +21,8 @@ public class ScissorsGame
 		P1Choice = baseController.getMyP1Choices();
 		P2Choice = baseController.getMyP2Choices();
 		
-		if(P1Choice == P2Choice)
-		{
-			baseController.setResult("tie");
-		}
-		else if(P1Choice == "rock" && P2Choice == "paper")
+		
+		if(P1Choice == "rock" && P2Choice == "paper")
 		{
 			baseController.setResult("P2");
 		}
@@ -48,6 +45,10 @@ public class ScissorsGame
 		else if(P1Choice == "scissors" && P2Choice == "paper")
 		{
 			baseController.setResult("P1");
+		}
+		else if(P1Choice == P2Choice)
+		{
+			baseController.setResult("tie");
 		}
 		
 	}

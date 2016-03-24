@@ -40,8 +40,8 @@ public class PaperPanel extends JPanel
 	{
 		this.baseController = baseController;
 		baseLayout = new SpringLayout();
-		gameMode = new JCheckBox("2 Player");
-		RockButtonP1 = new JButton("Rock");
+		gameMode = new JCheckBox("2 Player");	
+		RockButtonP1 = new JButton("Rock");	
 		PaperButtonP1 = new JButton("Paper");		
 		ScissorsButtonP1 = new JButton("Scissors");		
 		RockButtonP2 = new JButton("Rock");	
@@ -78,6 +78,8 @@ public class PaperPanel extends JPanel
 		this.add(whoseTurn);
 		this.add(Result);
 		this.add(gameMode);
+		this.add(P1Score);
+		this.add(P2Score);
 		
 	}
 	
@@ -99,6 +101,13 @@ public class PaperPanel extends JPanel
 		baseLayout.putConstraint(SpringLayout.WEST, whoseTurn, 179, SpringLayout.WEST, this);
 		baseLayout.putConstraint(SpringLayout.SOUTH, Result, -24, SpringLayout.SOUTH, this);
 		baseLayout.putConstraint(SpringLayout.EAST, Result, -112, SpringLayout.EAST, this);
+		baseLayout.putConstraint(SpringLayout.NORTH, gameMode, 10, SpringLayout.NORTH, this);
+		baseLayout.putConstraint(SpringLayout.WEST, gameMode, 0, SpringLayout.WEST, RockButtonP1);
+		baseLayout.putConstraint(SpringLayout.WEST, P1Score, 10, SpringLayout.WEST, this);
+		baseLayout.putConstraint(SpringLayout.SOUTH, P1Score, -9, SpringLayout.NORTH, RockButtonP1);
+		baseLayout.putConstraint(SpringLayout.SOUTH, P2Score, -6, SpringLayout.NORTH, RockButtonP2);
+		baseLayout.putConstraint(SpringLayout.EAST, P2Score, 0, SpringLayout.EAST, RockButtonP2);
+		
 	}
 	
 	private void setupListeners()
