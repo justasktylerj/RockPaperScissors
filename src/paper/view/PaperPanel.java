@@ -272,10 +272,12 @@ public class PaperPanel extends JPanel
 		{
 			baseController.setMyP2Choices("rock");
 		}
-		else
+		else if(rand == 2)
 		{
 			baseController.setMyP2Choices("paper");
 		}
+		
+		whoWon();
 		
 	}
 	
@@ -295,10 +297,13 @@ public class PaperPanel extends JPanel
 			P2Score.setText("P2 score: " + P2Wins);
 			
 		}
-		else
+		else if(baseController.getResult() == "tie")
 		{
 			Result.setText("You tied");
 		}
+		
+		baseController.setMyP1Choices(null);
+		baseController.setMyP2Choices(null);
 	}
 	
 	
