@@ -32,6 +32,7 @@ public class RockController
 	{
 		ScissorsGame.RunResult();
 	}
+	
 	public String getResult() 
 	{
 		return result;

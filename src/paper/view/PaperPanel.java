@@ -304,8 +304,8 @@ public class PaperPanel extends JPanel
 			Result.setText("You tied");
 		}
 		
-		baseController.setMyP1Choices(null);
-		baseController.setMyP2Choices(null);
+		//baseController.setMyP1Choices(null);
+		//baseController.setMyP2Choices(null);
 	}
 	
 	
