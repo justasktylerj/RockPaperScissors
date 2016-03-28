@@ -281,8 +281,10 @@ public class PaperPanel extends JPanel
 		
 	}
 	
-	private void whoWon()
+	public void whoWon()
 	{
+		baseController.ScissorsGame.RunResult();
+		
 		if (baseController.getResult() == "P1")
 		{
 			Result.setText("P1 Used " + baseController.getMyP1Choices() + "and P2 used " + baseController.getMyP2Choices() + " and P1 won");

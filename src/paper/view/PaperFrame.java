@@ -16,7 +16,6 @@ public class PaperFrame extends JFrame
 		setupFrame();
 	}
 	
-
 	private void setupFrame()
 	{
 		this.setContentPane(basePanel);  //installs the panel in the frame

@@ -11,7 +11,7 @@ public class RockController
 	private PaperPanel basePanel;
 	public String myP1Choices;
 	public String myP2Choices;
-	private ScissorsGame ScissorsGame;
+	public ScissorsGame ScissorsGame;
 	public  String result;
 	
 	public RockController(PaperPanel basePanel)
@@ -23,6 +23,15 @@ public class RockController
 		result = new String();
 	}
 	
+	public void start()
+	{
+		
+	}
+	
+	public void runGame()
+	{
+		ScissorsGame.RunResult();
+	}
 	public String getResult() 
 	{
 		return result;
@@ -31,11 +40,6 @@ public class RockController
 	public void setResult(String result) 
 	{
 		this.result = result;
-	}
-
-	public void start()
-	{
-		
 	}
 
 	public String getMyP1Choices() 
@@ -57,4 +61,38 @@ public class RockController
 	{
 		this.myP2Choices = myP2Choices;
 	}
+
+	public PaperFrame getBaseFrame() 
+	{
+		return baseFrame;
+	}
+
+	public void setBaseFrame(PaperFrame baseFrame) 
+	{
+		this.baseFrame = baseFrame;
+	}
+
+	public PaperPanel getBasePanel() 
+	{
+		return basePanel;
+	}
+
+	public void setBasePanel(PaperPanel basePanel) 
+	{
+		this.basePanel = basePanel;
+	}
+
+	public ScissorsGame getScissorsGame() 
+	{
+		return ScissorsGame;
+	}
+
+	public void setScissorsGame(ScissorsGame scissorsGame) 
+	{
+		ScissorsGame = scissorsGame;
+	}
+	
+	
 }
+
+

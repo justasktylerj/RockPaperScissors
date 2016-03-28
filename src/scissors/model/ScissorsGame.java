@@ -11,9 +11,8 @@ public class ScissorsGame
 	
 	public ScissorsGame(RockController baseController)
 	{
-		this.P1Choice = null;
-		this.P2Choice = null;
-		
+		P1Choice = "rock";
+		P2Choice = "rock";
 	}
 	
 	public void RunResult()
